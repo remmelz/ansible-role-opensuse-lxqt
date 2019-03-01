@@ -1,0 +1,10 @@
+
+---
+
+  - include_tasks: ./install-desktop.yml
+  - include_tasks: ./configure-system.yml
+  - include_tasks: ./configure-lightdm.yml
+  - include_tasks: ./copy-skel.yml
+  - include_tasks: ./install-opensuse-update.yml
+  - include_tasks: ./create-user.yml
+  

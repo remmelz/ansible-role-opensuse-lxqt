@@ -1,0 +1,8 @@
+
+---
+
+  rpm_mirror  : "http://ftp.gwdg.de/pub/opensuse/tumbleweed/repo/oss/suse/noarch"
+  rpm_origami : "origami-icon-theme-1.1.1-1.1.noarch.rpm"
+  new_user    : "kees"
+
+

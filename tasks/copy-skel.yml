@@ -1,0 +1,27 @@
+
+---
+
+  - name: Remove local and config skel folder
+    file:
+      path: "/etc/skel/{{ item }}"
+      state: absent
+    with_items:
+      - ".local"
+      - ".config"
+
+  - name: Copy skeleton local and config folder
+    copy:
+      src: "./files/skel/{{ item }}/"
+      dest: "/etc/skel/.{{ item }}"
+    with_items:
+      - "local"
+      - "config"
+
+  - name: Copy skeleton root folder
+    copy:
+      src: "./files/skel/{{ item }}"
+      dest: "/etc/skel/.{{ item }}"
+    with_items:
+      - "xscreensaver"
+
+

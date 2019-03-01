@@ -1,0 +1,8 @@
+
+[Desktop Entry]
+Exec=/usr/bin/compton -b
+Name=Compton
+Type=Application
+Version=1.0
+X-LXQt-Need-Tray=true
+

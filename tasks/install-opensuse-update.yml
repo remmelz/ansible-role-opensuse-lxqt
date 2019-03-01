@@ -1,0 +1,28 @@
+
+---
+
+  - name: Copying OpenSUSE Update script
+    template:
+      src: ./templates/scripts/opensuse-update.j2
+      dest: /usr/bin/opensuse-update
+      owner: root
+      group: root
+      mode: 0755
+
+  - name: Copying OpenSUSE update sudoers file
+    template:
+      src: ./templates/sudoers.d/opensuse-update.j2
+      dest: /etc/sudoers.d/opensuse-update
+      owner: root
+      group: root
+      mode: 0644
+
+  - name: Copying OpenSUSE update desktop file
+    template:
+      src: ./templates/applications/opensuse-update.desktop.j2
+      dest: /usr/share/applications/opensuse-update.desktop
+      owner: root
+      group: root
+      mode: 0644
+
+ 

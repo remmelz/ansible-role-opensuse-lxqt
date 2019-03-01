@@ -1,0 +1,24 @@
+#!/bin/bash
+
+if [[ ! -f /etc/os-release ]]; then
+    echo "Error: could not determine openSUSE release"
+    exit 1
+fi
+
+RELEASE=`cat /etc/os-release \
+  | grep '^NAME=' \
+  | awk -F'"' '{print $2}'`
+
+echo "Updating ${RELEASE}..."
+
+[[ ${RELEASE} == "openSUSE Leap" ]] && \
+    /usr/bin/zypper -n update -l
+
+[[ ${RELEASE} == "openSUSE Tumbleweed" ]] && \
+    /usr/bin/zypper -n dist-upgrade -l --no-allow-vendor-change
+
+echo "Finished"
+sleep 10
+
+exit
+

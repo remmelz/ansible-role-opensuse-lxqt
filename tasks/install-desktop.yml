@@ -1,0 +1,73 @@
+
+---
+
+  - name: Installing LXQT desktop environment
+    shell: zypper -n in --type=pattern lxqt
+
+  - name: Installing desktop utilities
+    zypper:
+      name: "{{ item }}"
+      state: latest
+    with_items:
+      - lightdm-slick-greeter-branding-openSUSE
+      - lxde-common-branding-openSUSE
+      - virt-manager
+      - openvpn
+      - NetworkManager
+      - NetworkManager-openvpn
+      - NetworkManager-openvpn-gnome
+      - compton
+      - compton-conf
+      - owncloud-client
+      - owncloud-client-dolphin
+      - syncthing
+      - qsyncthingtray
+      - keepassxc
+      - MozillaFirefox
+      - git
+      - remmina
+      - remmina-plugin-rdp
+      - remmina-plugin-spice
+      - remmina-plugin-vnc
+      - remmina-plugin-xdmcp
+      - remmina-plugins-gnome
+      - transmission-qt
+      - kwrite
+      - abiword
+      - gnumeric
+      - ktimer
+      - konsole
+      - qpdfview
+      - gtk2-metatheme-numix
+      - gtk3-metatheme-numix
+      - breeze5-wallpapers
+      - paper-icon-theme
+      - origami-icon-theme
+      - ubuntu-fonts
+      - google-droid-fonts
+      - kde-oxygen-fonts
+      - liberation-fonts
+      - lato-fonts
+      - lxrandr
+      - chrony
+      - ansible
+      - kcalc
+      - fping
+      - dolphin
+      - sshfs
+      - ccrypt
+      - upower
+      - sudo
+      - flatpak
+      - cryfs
+      - pwgen
+
+  - name: Copying wallpaper files
+    copy:
+      src: "{{ item }}"
+      dest: /usr/share/wallpapers/
+    with_fileglob:
+      - ./files/wallpapers/*
+
+
+
