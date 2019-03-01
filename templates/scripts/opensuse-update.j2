@@ -1,24 +1,13 @@
 #!/bin/bash
 
-if [[ ! -f /etc/os-release ]]; then
-    echo "Error: could not determine openSUSE release"
-    exit 1
-fi
+{% if ansible_distribution == 'openSUSE Tumbleweed' %}
+  {% set cmd_update = cmd_update_tumbleweed %}
+{% else %}
+  {% set cmd_update = cmd_update_leap %}
+{% endif %}
 
-RELEASE=`cat /etc/os-release \
-  | grep '^NAME=' \
-  | awk -F'"' '{print $2}'`
+{{ cmd_update }}
 
-echo "Updating ${RELEASE}..."
-
-[[ ${RELEASE} == "openSUSE Leap" ]] && \
-    /usr/bin/zypper -n update -l
-
-[[ ${RELEASE} == "openSUSE Tumbleweed" ]] && \
-    /usr/bin/zypper -n dist-upgrade -l --no-allow-vendor-change
-
-echo "Finished"
-sleep 10
-
+read -t 3 "Finished"
 exit
 
