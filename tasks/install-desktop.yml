@@ -35,6 +35,7 @@
       - kwrite
       - abiword
       - gnumeric
+      - retext
       - ktimer
       - konsole
       - qpdfview
