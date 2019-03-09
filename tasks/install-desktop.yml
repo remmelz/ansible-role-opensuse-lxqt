@@ -33,6 +33,7 @@
       - remmina-plugins-gnome
       - transmission-qt
       - kwrite
+      - pinta
       - abiword
       - gnumeric
       - retext
