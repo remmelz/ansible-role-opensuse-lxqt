@@ -41,6 +41,7 @@
       - ktimer
       - konsole
       - filelight
+      - ksysguard5
       - qpdfview
       - gtk2-metatheme-numix
       - gtk3-metatheme-numix
