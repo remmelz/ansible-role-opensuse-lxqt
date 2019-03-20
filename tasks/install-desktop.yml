@@ -36,6 +36,7 @@
       - pinta
       - abiword
       - gnumeric
+      - dia
       - retext
       - ktimer
       - konsole
