@@ -7,10 +7,9 @@ Ansible playbook for installing and configuring the LXQT desktop for OpenSUSE.
 * Install a minimal OpenSUSE installation (server mode).
 * Run this ansible playbook on the system.
 
-
-    curl https://raw.githubusercontent.com/remmelz/ansible-role-opensuse-lxqt/master/tests/run.sh | bash -x
-
-
+```
+curl https://raw.githubusercontent.com/remmelz/ansible-role-opensuse-lxqt/master/tests/run.sh | bash -x
+```
 
 ### Mozilla Firefox
 These settings needs to be done manually or one can use the Firefox sync account:
