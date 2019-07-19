@@ -67,11 +67,6 @@
       - cryfs
       - pwgen
 
-  - name: Copy Shadow icon repository
-    git:
-      repo: 'https://github.com/rudrab/Shadow.git'
-      dest: /usr/share/icons/Shadow
-
   - name: Copying wallpaper files
     copy:
       src: "{{ item }}"
