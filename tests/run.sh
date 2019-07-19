@@ -1,5 +1,7 @@
 #!/bin/bash
 
+zypper -n dist-upgrade
+zypper -n dist-upgrade
 zypper -n install git ansible python-xml
 
 mkdir /etc/ansible/roles
