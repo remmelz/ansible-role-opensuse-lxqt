@@ -34,7 +34,10 @@
       - transmission-qt
       - kwrite
       - pinta
-      - libreoffice
+      - libreoffice-base
+      - libreoffice-write
+      - libreoffice-calc
+      - libreoffice-draw
       - libreoffice-qt5
       - catfish
       - retext
