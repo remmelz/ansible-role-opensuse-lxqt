@@ -34,8 +34,8 @@
       - transmission-qt
       - kwrite
       - pinta
-      - abiword
-      - gnumeric
+      - libreoffice
+      - libreoffice-qt5
       - dia
       - retext
       - ktimer
