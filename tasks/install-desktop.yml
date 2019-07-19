@@ -38,7 +38,7 @@
       - libreoffice-writer
       - libreoffice-calc
       - libreoffice-draw
-      - libreoffice-qt5
+      - libreoffice-gtk3
       - catfish
       - retext
       - ktimer
