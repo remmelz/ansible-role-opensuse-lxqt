@@ -35,7 +35,7 @@
       - kwrite
       - pinta
       - libreoffice-base
-      - libreoffice-write
+      - libreoffice-writer
       - libreoffice-calc
       - libreoffice-draw
       - libreoffice-qt5
