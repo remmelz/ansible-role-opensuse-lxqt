@@ -18,6 +18,7 @@
       - NetworkManager-openvpn-gnome
       - compton
       - compton-conf
+      - blueman
       - owncloud-client
       - owncloud-client-dolphin
       - syncthing
