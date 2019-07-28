@@ -1,7 +1,7 @@
 
 [Appearance]
 ColorScheme=WhiteOnBlack
-Font=Oxygen Mono,14,-1,5,50,0,0,0,0,0
+Font=Liberation Mono,14,-1,5,50,0,0,0,0,0
 
 [General]
 Name=Profile 1
