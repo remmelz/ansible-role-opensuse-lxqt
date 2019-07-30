@@ -1,6 +1,7 @@
 ## ansible-role-opensuse-lxqt
 
-Ansible playbook for installing and configuring the LXQT desktop for OpenSUSE.
+Ansible playbook for installing and configuring the LXQT desktop for OpenSUSE. The result is a nice 
+clean LXQT Desktop together with some KDE utilities like kwrite, dolphin (file manager) and konsole as terminal.
 
 ![Desktop](/screenshots/LXQT-Desktop.png)
 
@@ -14,10 +15,10 @@ curl https://raw.githubusercontent.com/remmelz/ansible-role-opensuse-lxqt/master
 ```
 
 ### Mozilla Firefox
-These settings needs to be done manually or one can use the Firefox sync account:
-* In about:config
-  * Set layout.css.devPixelsPerPx to 1.10
-* Some nice Extensions:
+You might want to play with the font scale level in Mozilla Firefox depending on the resolution of your monitor:
+* In Firefox type about:config
+  * Set layout.css.devPixelsPerPx for example to 1.10
+* Some nice Extensions i use:
   * Bitwarden
   * Ublock origin
   * User-Agent Switcher
