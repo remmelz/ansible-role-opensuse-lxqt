@@ -6,7 +6,7 @@ Ansible playbook for installing and configuring the LXQT desktop for OpenSUSE.
 
 ## How to use
 
-* Install a minimal OpenSUSE installation (server mode).
+* First make sure your system has a minimal OpenSUSE installation (preferably server mode).
 * Run this ansible playbook on the system.
 
 ```
