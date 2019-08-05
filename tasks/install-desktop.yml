@@ -24,6 +24,7 @@
         - qsyncthingtray
         - keepassxc
         - MozillaFirefox
+        - torbrowser-launcher
         - git
         - remmina
         - remmina-plugin-rdp
