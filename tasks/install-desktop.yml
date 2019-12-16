@@ -71,6 +71,7 @@
         - flatpak
         - cryfs
         - pwgen
+        - tree
 
   - name: Copying wallpaper files
     copy:
