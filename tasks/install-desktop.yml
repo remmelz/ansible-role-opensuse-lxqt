@@ -40,8 +40,9 @@
         - libreoffice-calc
         - libreoffice-draw
         - libreoffice-gtk3
+        - odt2txt
+        - gnote
         - kmymoney
-        - notes-up
         - ktimer
         - konsole
         - filelight
