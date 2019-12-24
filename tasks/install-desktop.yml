@@ -32,6 +32,8 @@
         - remmina-plugin-vnc
         - remmina-plugin-xdmcp
         - remmina-plugins-gnome
+        - neovim
+        - vim-plugin-vimwiki
         - transmission-qt
         - kwrite
         - pinta
@@ -41,7 +43,6 @@
         - libreoffice-draw
         - libreoffice-gtk3
         - odt2txt
-        - gnote
         - kmymoney
         - ktimer
         - konsole
