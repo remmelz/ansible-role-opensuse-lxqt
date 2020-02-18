@@ -1,6 +1,12 @@
 
 ---
 
+  - name: Disable Wicked
+    systemd:
+      name: wicked
+      state: stopped
+      enabled: no
+
   - name: Configuring NetworkManager
     systemd:
       name: NetworkManager
