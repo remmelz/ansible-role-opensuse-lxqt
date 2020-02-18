@@ -15,7 +15,7 @@ wget -q --show-progress \
   -O firefox-latest.tar.bz2 \
   "${url}?${product}&${version}"
 
-if [[ ! -f firefox-latest.tar.bz ]]; then
+if [[ ! -f firefox-latest.tar.bz2 ]]; then
   echo "Error: downloaded file not found."
   exit 1
 fi
