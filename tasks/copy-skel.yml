@@ -26,4 +26,9 @@
       - "alias"
       - "tmux.conf"
 
-
+  - name: Copy custom scripts in bin
+    copy:
+      src: "./files/skel/bin/{{ item }}"
+      dest: "/etc/skel/bin/{{ item }}"
+    with_items:
+      - "install-firefox"
