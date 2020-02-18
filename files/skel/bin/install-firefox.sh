@@ -32,7 +32,7 @@ echo "Creating application file..."
 echo '[Desktop Entry]' > applications/firefox.desktop
 echo 'Categories=Network;WebBrowser;GTK;' >> applications/firefox.desktop
 echo 'Encoding=UTF-8' >> applications/firefox.desktop
-echo 'Name=Firefox' >> applications/firefox.desktop
+echo 'Name=My Firefox' >> applications/firefox.desktop
 echo 'GenericName=Web Browser' >> applications/firefox.desktop
 echo 'Comment=Web Browser' >> applications/firefox.desktop
 echo 'Exec=~/.local/share/firefox/firefox %u' >> applications/firefox.desktop
