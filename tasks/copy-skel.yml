@@ -30,5 +30,6 @@
     copy:
       src: "./files/skel/bin/{{ item }}"
       dest: "/etc/skel/bin/{{ item }}"
+      mode: '0755'
     with_items:
-      - "install-firefox"
+      - "install-firefox.sh"
