@@ -23,5 +23,7 @@
       dest: "/etc/skel/.{{ item }}"
     with_items:
       - "xscreensaver"
+      - "alias"
+      - "tmux.conf"
 
 
