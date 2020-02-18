@@ -1,0 +1,8 @@
+# A Bash alias is essentially nothing more than a keyboard shortcut, 
+# an abbreviation, a means of avoiding typing a long command sequence.
+
+alias ll="ls -ltr"
+alias l="ls -1tr"
+alias vim="nvim"
+alias ssh-edit-conf="nvim ~/.ssh/config"
+
