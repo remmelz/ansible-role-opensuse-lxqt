@@ -27,6 +27,7 @@ if [[ ! -d ./firefox ]]; then
   exit 1
 fi
 
+mkdir -p applications
 echo "Creating application file..."
 echo '[Desktop Entry]' > applications/firefox.desktop
 echo 'Categories=Network;WebBrowser;GTK;' >> applications/firefox.desktop
