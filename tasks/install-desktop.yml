@@ -34,8 +34,7 @@
         - NetworkManager
         - NetworkManager-openvpn
         - NetworkManager-openvpn-gnome
-        - compton
-        - compton-conf
+        - picom
         - blueman
         - owncloud-client
         - owncloud-client-dolphin
