@@ -51,7 +51,6 @@
         - remmina-plugins-gnome
         - transmission-qt
         - kwrite
-        - pinta
         - ktimer
         - konsole
         - filelight
@@ -62,7 +61,6 @@
         - breeze5-wallpapers
         - paper-icon-theme
         - origami-icon-theme
-        - lato-fonts
         - lxrandr
         - kcalc
         - dolphin
@@ -76,6 +74,7 @@
         - google-droid-fonts
         - kde-oxygen-fonts
         - liberation-fonts
+        - lato-fonts
 
   - name: Installing Office tools
     zypper:
