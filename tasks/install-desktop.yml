@@ -23,7 +23,6 @@
         - syncthing
         - qsyncthingtray
         - keepassxc
-        - MozillaFirefox
         - torbrowser-launcher
         - git
         - remmina
@@ -37,11 +36,6 @@
         - transmission-qt
         - kwrite
         - pinta
-        - libreoffice-base
-        - libreoffice-writer
-        - libreoffice-calc
-        - libreoffice-draw
-        - libreoffice-gtk3
         - odt2txt
         - kmymoney
         - ktimer
@@ -73,6 +67,12 @@
         - cryfs
         - pwgen
         - tree
+        - tmux
+        - libreoffice-base
+        - libreoffice-writer
+        - libreoffice-calc
+        - libreoffice-draw
+        - libreoffice-gtk3
 
   - name: Copying wallpaper files
     copy:
