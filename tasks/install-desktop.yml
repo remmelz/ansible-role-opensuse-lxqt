@@ -87,7 +87,7 @@
         - libreoffice-draw
         - libreoffice-gtk3
         - odt2txt
-      when: install_officetools == "yes"
+    when: install_officetools == "yes"
 
   - name: Copying wallpaper files
     copy:
