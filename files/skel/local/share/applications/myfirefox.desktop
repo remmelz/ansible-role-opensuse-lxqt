@@ -1,0 +1,11 @@
+[Desktop Entry]
+Categories=Network;WebBrowser;GTK;
+Encoding=UTF-8
+Name=My Firefox
+GenericName=Web Browse
+Comment=Web Browser
+Exec=ansible-playbook -i 'localhost,' /etc/ansible/firefox.yml
+Icon=web-browser
+Terminal=true
+StartupNotify=true
+Type=Application
