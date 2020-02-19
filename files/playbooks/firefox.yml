@@ -1,0 +1,50 @@
+
+- name: Install Latest Firefox
+
+  hosts: all
+  connection: local
+
+  vars:
+
+    lang: "en-US"
+    platform: "linux64"
+    product: "firefox-latest-ssl"
+    download_url: "https://download.mozilla.org"
+
+  tasks:
+
+    - name: Downloading latest Firefox version
+      shell: |
+        wget -q --show-progress \
+          -O ~/Downloads/firefox.tar.bz2 \
+          "{{ download_url }}?product={{ product }}&os={{ platform }}&lang={{ lang  }}"
+
+    - name: Ensuring target directories
+      file:
+        state: directory
+        path: "~/.local/{{ item }}"
+      with_items:
+        - share
+        - share/applications
+
+    - name: Extracting Firefox tar file
+      unarchive:
+        src: ~/Downloads/firefox.tar.bz2
+        dest: ~/.local/share/
+
+    - name: Creating Application shortcut
+      copy:
+        dest: ~/.local/share/applications/myfirefox.desktop
+        content: |
+          [Desktop Entry]
+          Categories=Network;WebBrowser;GTK;
+          Encoding=UTF-8
+          Name=My Firefox
+          GenericName=Web Browse
+          Comment=Web Browser
+          Exec=~/.local/share/firefox/firefox %u
+          Icon=web-browser
+          Terminal=false
+          StartupNotify=true
+          MimeType=text/html;text/xml;application/xhtml+xml;application/vnd.mozilla.xul+xml;text/mml;application/x-xpinstall;x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/ftp;
+          Type=Application
