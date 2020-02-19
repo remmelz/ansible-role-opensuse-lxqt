@@ -1,6 +1,13 @@
 
 ---
 
+  - name: Copy Playbooks to Ansible folder
+    copy:
+      src: "./files/playbooks/{{ item }}"
+      dest: "/etc/ansible/{{ item }}"
+    with_items:
+      - "firefox.yml"
+
   - name: Remove local and config skel folder
     file:
       path: "/etc/skel/{{ item }}"
@@ -25,11 +32,3 @@
       - "xscreensaver"
       - "alias"
       - "tmux.conf"
-
-  - name: Copy custom scripts in bin
-    copy:
-      src: "./files/skel/bin/{{ item }}"
-      dest: "/etc/skel/bin/{{ item }}"
-      mode: '0755'
-    with_items:
-      - "install-firefox.sh"
