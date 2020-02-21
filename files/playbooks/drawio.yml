@@ -1,0 +1,41 @@
+
+- name: Install Draw.IO
+
+  hosts: all
+  connection: local
+
+  vars:
+
+    version: "12.6.5"
+
+  tasks:
+
+    - name: Ensuring target directories
+      file:
+        state: directory
+        path: "~/.local/share/{{ item }}"
+      with_items:
+        - applications
+        - drawio
+
+    - name: Downloading Draw.IO AppImage
+      get_url:
+        url: "https://github.com/jgraph/drawio-desktop/releases/download/v{{ version }}/draw.io-x86_64-{{ version }}.AppImage"
+        dest: ~/.local/share/drawio/DrawIO.AppImage
+        mode: '0755'
+
+    - name: Creating Application shortcut
+      copy:
+        dest: ~/.local/share/applications/drawio.desktop
+        content: |
+          [Desktop Entry]
+          Encoding=UTF-8
+          Name=Draw.IO
+          GenericName=Draw IO
+          Comment=Diagram Editor
+          Exec=~/.local/share/drawio/DrawIO.AppImage
+          Icon=electron
+          Terminal=false
+          StartupNotify=true
+          Type=Application
+          Categories=GNOME;GTK;Utility;X-SuSE-DesktopUtility;
