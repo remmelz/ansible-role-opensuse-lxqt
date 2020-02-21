@@ -1,0 +1,48 @@
+
+- name: Install Joplin
+
+  hosts: all
+  connection: local
+
+  vars:
+
+    version: "1.0.179"
+
+  tasks:
+
+    - name: Ensuring target directories
+      file:
+        state: directory
+        path: "~/.local/share/{{ item }}"
+      with_items:
+        - icons/hicolor/512x512/apps
+        - applications
+        - joplin
+
+    - name: Downloading Joplin AppImage
+      get_url:
+        url: "https://github.com/laurent22/joplin/releases/download/v{{ version }}/Joplin-{{ version }}.AppImage"
+        dest: ~/.local/share/joplin/Joplin.AppImage
+        mode: '0755'
+
+    - name: Downloading Joplin Icon
+      get_url:
+        url: "https://joplinapp.org/images/Icon512.png"
+        dest: ~/.local/share/icons/hicolor/512x512/apps/joplin.png
+
+    - name: Creating Application shortcut
+      copy:
+        dest: ~/.local/share/applications/joplin.desktop
+        content: |
+          [Desktop Entry]
+          Encoding=UTF-8
+          Name=Joplin
+          GenericName=Joplin App
+          Comment=Note-taking
+          Exec=~/.local/share/joplin/Joplin.AppImage
+          Icon=joplin.png
+          Terminal=false
+          StartupNotify=true
+          Type=Application
+          Categories=GNOME;GTK;Utility;X-SuSE-DesktopUtility;
+
