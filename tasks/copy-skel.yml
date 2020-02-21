@@ -16,7 +16,6 @@
     with_items:
       - "local"
       - "config"
-      - "Playbooks"
 
   - name: Copy skeleton root folder
     copy:
