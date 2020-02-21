@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Joplin
+GenericName=Joplin App
+Comment=Note-taking
+Exec=xterm -bg black -fg white -geometry "100x30" -e "ansible-playbook -i 'localhost,' ~/Playbooks/Joplin.yml"
+Icon=joplin.png
+Terminal=false
+StartupNotify=true
+Type=Application
+Categories=GNOME;GTK;Utility;X-SuSE-DesktopUtility;
