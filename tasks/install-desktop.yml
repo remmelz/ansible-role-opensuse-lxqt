@@ -64,6 +64,7 @@
         - kcalc
         - dolphin
         - upower
+        - zeal
 
   - name: Installing Fonts
     zypper:
