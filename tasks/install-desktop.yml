@@ -65,6 +65,7 @@
         - dolphin
         - upower
         - zeal
+        - xournal
 
   - name: Installing Fonts
     zypper:
