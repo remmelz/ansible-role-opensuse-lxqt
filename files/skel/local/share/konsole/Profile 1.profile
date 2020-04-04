@@ -1,6 +1,6 @@
 
 [Appearance]
-ColorScheme=WhiteOnBlack
+ColorScheme=AritimDark
 Font=Liberation Mono,14,-1,5,50,0,0,0,0,0
 
 [General]
