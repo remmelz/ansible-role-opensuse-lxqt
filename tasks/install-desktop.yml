@@ -91,6 +91,12 @@
         - odt2txt
     when: install_officetools == "yes"
 
+  - name: Increasing window handler in default theme
+    lineinfile:
+      path: /usr/share/themes/Numix/openbox-3/themerc
+      regexp: '^window.handle.width'
+      line: 'window.handle.width: 6'
+
   - name: Copying wallpaper files
     copy:
       src: "{{ item }}"
