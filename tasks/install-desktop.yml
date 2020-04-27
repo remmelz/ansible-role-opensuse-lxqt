@@ -56,7 +56,6 @@
         - filelight
         - ksysguard5
         - qpdfview
-        - ruby2.5-rubygem-asciidoctor
         - gtk2-metatheme-numix
         - gtk3-metatheme-numix
         - breeze5-wallpapers
