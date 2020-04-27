@@ -66,7 +66,6 @@
         - dolphin
         - upower
         - zeal
-        - xournal
         - gimp
 
   - name: Installing Fonts
