@@ -11,6 +11,7 @@
         - git
         - neovim
         - nodejs10    # Needed for NeoVIM Coc plugin
+        - neofetch
         - sshfs
         - ccrypt
         - fping
