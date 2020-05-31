@@ -7,5 +7,7 @@ mkdir /etc/ansible/roles
 cd /etc/ansible/roles || exit 1
 git clone https://github.com/remmelz/ansible-role-opensuse-lxqt.git
 
-cd ansible-role-opensuse-lxqt || exit 1
-ansible-playbook -c local -i 'localhost,' ./playbook.yml
+echo
+echo "cd ansible-role-opensuse-lxqt || exit 1"
+echo "ansible-playbook -c local -i 'localhost,' ./playbook.yml"
+echo
