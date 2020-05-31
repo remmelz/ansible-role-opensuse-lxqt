@@ -27,6 +27,7 @@
 
   - name: Set default graphical mode
     shell: systemctl set-default graphical.target
+    when: install_desktop | bool
 
   - name: Set default grub timeout
     lineinfile:
