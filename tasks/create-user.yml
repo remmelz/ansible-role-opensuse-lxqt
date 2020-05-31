@@ -3,7 +3,7 @@
 
   - name: Creating user account
     user:
-      name: "{{ new_user }}"
+      name: "{{ create_user }}"
       groups: autologin
 
 
