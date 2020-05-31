@@ -1,12 +1,9 @@
 
 ---
 
-  install_officetools: "no"
+rpm_mirror  : "http://ftp.gwdg.de/pub/opensuse/tumbleweed/repo/oss/suse/noarch"
+rpm_origami : "origami-icon-theme-1.1.1-1.1.noarch.rpm"
 
-  rpm_mirror  : "http://ftp.gwdg.de/pub/opensuse/tumbleweed/repo/oss/suse/noarch"
-  rpm_origami : "origami-icon-theme-1.1.1-1.1.noarch.rpm"
-  new_user    : "kees"
-
-  cmd_update_tumbleweed : "zypper -n dist-upgrade -l --no-allow-vendor-change"
-  cmd_update_leap       : "zypper -n update -l"
+cmd_update_tumbleweed : "zypper -n dist-upgrade -l --no-allow-vendor-change"
+cmd_update_leap       : "zypper -n update -l"
 
