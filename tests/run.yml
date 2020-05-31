@@ -1,8 +1,0 @@
-
-
-- name: Deploying a LXQT desktop for OpenSUSE
-  hosts: all
-
-  roles:
-    - ansible-role-opensuse-lxqt
-
