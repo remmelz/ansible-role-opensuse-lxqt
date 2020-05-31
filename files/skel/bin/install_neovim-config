@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Neovim is a refactor, and sometimes redactor, in the tradition of Vim (which itself derives 
+# rom Stevie). It is not a rewrite but a continuation and extension of Vim. Many clones and 
+# derivatives exist, some very clever—but none are Vim. Neovim is built for users who want 
+# the good parts of Vim, and more. 
+
+mkdir ~/.config || exit
+cd ~/.config
+git clone https://github.com/remmelz/neovim-config.git
+mv neovim-config nvim
