@@ -8,11 +8,11 @@
       owner: root
       group: root
       mode: 0644
-    when: install_desktop | bool
+    when: install_desktop
 
   - name: Ensure group autologin exists
     group:
       name: autologin
       state: present
-    when: install_desktop | bool
+    when: install_desktop
 

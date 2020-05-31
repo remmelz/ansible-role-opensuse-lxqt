@@ -21,11 +21,12 @@
         - pwgen
         - tree
         - tmux
-      when: install_base | bool
+    when: install_base
 
   - name: Installing LXQT desktop environment
-    shell: zypper -n in --type=pattern lxqt
-      when: install_desktop | bool
+    shell: |
+      zypper -n in --type=pattern lxqt
+    when: install_desktop
 
   - name: Installing desktop utilities
     zypper:
@@ -69,7 +70,7 @@
         - upower
         - zeal
         - gimp
-      when: install_desktop_utils | bool
+    when: install_desktop_utils
 
   - name: Installing Fonts
     zypper:
@@ -80,7 +81,7 @@
         - kde-oxygen-fonts
         - liberation-fonts
         - lato-fonts
-      when: install_desktop | bool
+    when: install_desktop
     
   - name: Installing Office tools
     zypper:
@@ -93,14 +94,14 @@
         - libreoffice-draw
         - libreoffice-gtk3
         - odt2txt
-      when: install_officetools | bool
+    when: install_officetools
 
   - name: Increasing window handler in default theme
     lineinfile:
       path: /usr/share/themes/Numix/openbox-3/themerc
       regexp: '^window.handle.width'
       line: 'window.handle.width: 6'
-      when: install_desktop | bool
+    when: install_desktop
 
   - name: Copying wallpaper files
     copy:
@@ -108,6 +109,6 @@
       dest: /usr/share/wallpapers/
     with_fileglob:
       - ./files/wallpapers/*
-      when: install_desktop | bool
+    when: install_desktop
 
 
