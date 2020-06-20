@@ -22,6 +22,7 @@
         - tree
         - tmux
         - scrot
+        - mc
     when: install_base
 
   - name: Installing LXQT desktop environment
