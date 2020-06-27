@@ -96,7 +96,7 @@
         - libreoffice-draw
         - libreoffice-gtk3
         - odt2txt
-    when: install_officetools
+    when: install_office_tools
 
   - name: Increasing window handler in default theme
     lineinfile:
