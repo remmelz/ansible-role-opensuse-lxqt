@@ -3,7 +3,7 @@
 create_user: "kees"
 
 install_base: yes
-install_desktop: no
-install_desktop_utils: no
+install_desktop: yes
+install_desktop_utils: yes
 install_officetools: no
 
