@@ -3,6 +3,6 @@
 
 alias ll="ls -ltr"
 alias l="ls -1tr"
-alias vim="nvim"
-alias ssh-edit-conf="nvim ~/.ssh/config"
+# alias vim="nvim"
+# alias ssh-edit-conf="nvim ~/.ssh/config"
 
