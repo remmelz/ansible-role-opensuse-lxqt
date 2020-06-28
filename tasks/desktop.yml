@@ -46,7 +46,7 @@
       - dolphin
       - upower
       - zeal
-      - gimp
+      - krita
   when: install_desktop_utils
 
 - name: Installing Fonts
