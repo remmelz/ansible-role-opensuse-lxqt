@@ -47,6 +47,7 @@
       - upower
       - zeal
       - krita
+      - zim
   when: install_desktop_utils
 
 - name: Installing Fonts
