@@ -9,4 +9,10 @@
       - compton-conf
   when: install_desktop_utils
 
+- name: Removing MozillaFirefox
+  zypper:
+    state: absent
+    name:
+      - MozillaFirefox
+  when: install_desktop_utils
 

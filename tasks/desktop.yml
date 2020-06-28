@@ -4,7 +4,6 @@
 - name: Installing LXQT desktop environment
   shell: |
     zypper -n in --type=pattern lxqt
-    zypper -n rm MozillaFirefox
   when: install_desktop
 
 - name: Installing desktop utilities
