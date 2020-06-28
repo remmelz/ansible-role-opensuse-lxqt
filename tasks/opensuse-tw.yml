@@ -1,0 +1,10 @@
+
+---
+
+- name: Tumbleweed specific package
+  zypper:
+    state: latest
+    name:
+      - picom
+  when: install_desktop_utils
+

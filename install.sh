@@ -1,13 +1,17 @@
 #!/bin/bash
 
-zypper -n dist-upgrade
-zypper -n install git ansible
+zypper install git ansible python-xml || exit 1
 
-mkdir /etc/ansible/roles
+mkdir -p /etc/ansible/roles
 cd /etc/ansible/roles || exit 1
+
 git clone https://github.com/remmelz/ansible-role-opensuse-lxqt.git
 
-echo
-echo "cd ansible-role-opensuse-lxqt || exit 1"
-echo "ansible-playbook -c local -i 'localhost,' ./playbook.yml"
-echo
+cd ansible-role-opensuse-lxqt || exit 1
+
+ansible-playbook \
+  -c local \
+  -i 'localhost,' \
+  ./tests/play.yml
+
+

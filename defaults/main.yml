@@ -1,6 +1,6 @@
 ---
 
-create_user: "kees"
+new_user: "kees"
 
 install_base: yes
 install_desktop: yes

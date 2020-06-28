@@ -1,9 +1,0 @@
-
----
-
-  - name: Creating user account
-    user:
-      name: "{{ create_user }}"
-      groups: autologin
-    when: install_desktop
-

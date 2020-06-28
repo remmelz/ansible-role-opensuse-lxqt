@@ -1,0 +1,43 @@
+
+---
+
+- name: Disable Wicked
+  systemd:
+    name: wicked
+    state: stopped
+    enabled: no
+
+- name: Configuring NetworkManager
+  systemd:
+    name: NetworkManager
+    state: started
+    enabled: yes
+
+- name: Enable Firewalld
+  systemd:
+    name: firewalld
+    state: stopped
+    enabled: yes
+
+- name: Enable chrony
+  systemd:
+    name: chronyd
+    state: started
+    enabled: yes
+
+- name: Set default graphical mode
+  shell: |
+    systemctl set-default graphical.target
+  when: install_desktop
+
+- name: Set default grub timeout
+  lineinfile:
+    path: /etc/default/grub
+    regexp: '^GRUB_TIMEOUT='
+    line: 'GRUB_TIMEOUT=1'
+
+- name: Updating grub.cfg file
+  shell: grub2-mkconfig -o /boot/grub2/grub.cfg
+
+
+

@@ -1,0 +1,32 @@
+
+"============================================================
+" General
+"============================================================
+
+" Editing
+set tabstop=4        " The width of a TAB is set to 4.
+set shiftwidth=4     " Indents will have a width of 4.
+set softtabstop=4    " Sets the number of columns for a TAB.
+set expandtab        " Expand TABs to spaces.
+set nowrap           " do not automatically wrap on load
+set formatoptions-=t " do not automatically wrap text when typing
+set nu               " Sets linenumbers
+set noequalalways    " This will cause vim to size each new split relative the current split
+set nolist           " Hide invisible characters
+set mouse+=a         " Add mouse support
+
+" Cosmetics
+highlight LineNr ctermfg=grey
+
+"============================================================
+" Keyboard Shortcuts
+"============================================================
+
+nnoremap <C-e> :Explore<enter>
+imap ` <Esc>
+
+"============================================================
+" EOF
+"============================================================
+
+

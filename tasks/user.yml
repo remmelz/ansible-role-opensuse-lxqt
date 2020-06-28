@@ -1,0 +1,9 @@
+
+---
+
+- name: Creating user account
+  user:
+    name: "{{ new_user }}"
+    groups: autologin
+  when: install_desktop
+

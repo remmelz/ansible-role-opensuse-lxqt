@@ -1,0 +1,12 @@
+
+---
+
+- name: Leap specific packages
+  zypper:
+    state: latest
+    name:
+      - compton
+      - compton-conf
+  when: install_desktop_utils
+
+

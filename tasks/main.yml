@@ -1,10 +1,22 @@
 
 ---
 
-  - include_tasks: ./install-desktop.yml
-  - include_tasks: ./configure-system.yml
-  - include_tasks: ./configure-lightdm.yml
-  - include_tasks: ./copy-skel.yml
-  - include_tasks: ./install-opensuse-update.yml
-  - include_tasks: ./create-user.yml
-  
+- name: OpenSUSE Leap
+  set_fact:
+    distro: opensuse-leap
+  when: ansible_distribution == "openSUSE Leap"
+
+- name: OpenSUSE Tumbleweed
+  set_fact:
+    distro: opensuse-tw
+  when: ansible_distribution == "openSUSE Tumbleweed"
+
+- include_tasks: ./base.yml
+- include_tasks: ./desktop.yml
+- include_tasks: ./{{ distro }}.yml
+- include_tasks: ./lightdm.yml
+- include_tasks: ./skel.yml
+- include_tasks: ./updater.yml
+- include_tasks: ./system.yml
+- include_tasks: ./user.yml
+

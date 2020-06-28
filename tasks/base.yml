@@ -1,0 +1,27 @@
+
+---
+
+- name: Installing base tools
+  zypper:
+    state: latest
+    name:
+      - chrony
+      - ansible
+      - openvpn
+      - git
+      - neovim
+      - nodejs10
+      - neofetch
+      - sshfs
+      - ccrypt
+      - fping
+      - sudo
+      - flatpak
+      - cryfs
+      - pwgen
+      - tree
+      - tmux
+      - scrot
+      - mc
+  when: install_base
+
