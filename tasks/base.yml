@@ -9,8 +9,6 @@
       - ansible
       - openvpn
       - git
-      - neovim
-      - nodejs10
       - neofetch
       - sshfs
       - ccrypt
