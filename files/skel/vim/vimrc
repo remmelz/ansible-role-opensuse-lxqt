@@ -17,6 +17,7 @@ set mouse+=a         " Add mouse support
 
 " Cosmetics
 highlight LineNr ctermfg=grey
+" colorscheme slate
 
 "============================================================
 " Keyboard Shortcuts
