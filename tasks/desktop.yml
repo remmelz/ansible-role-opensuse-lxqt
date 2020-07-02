@@ -82,12 +82,3 @@
     line: 'window.handle.width: 6'
   when: install_desktop
 
-- name: Copying wallpaper files
-  copy:
-    src: "{{ item }}"
-    dest: /usr/share/wallpapers/
-  with_fileglob:
-    - ./files/wallpapers/*
-  when: install_desktop
-
-
