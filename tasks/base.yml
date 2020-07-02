@@ -10,6 +10,7 @@
       - openvpn
       - git
       - neofetch
+      - libnotify-tools
       - sshfs
       - ccrypt
       - fping
