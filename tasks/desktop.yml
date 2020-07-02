@@ -12,6 +12,7 @@
     name:
       - lightdm-slick-greeter-branding-openSUSE
       - lxde-common-branding-openSUSE
+      - libnotify-tools
       - virt-manager
       - NetworkManager
       - NetworkManager-openvpn
