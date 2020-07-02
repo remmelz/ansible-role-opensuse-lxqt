@@ -1,0 +1,17 @@
+
+---
+
+- name: Create a Wallpaper directory
+  file:
+    path: /usr/share/wallpapers/Remmelz
+    state: directory
+    mode: '0755'
+  when: install_desktop
+
+- name: Copying wallpaper files
+  copy:
+    src: "{{ item }}"
+    dest: /usr/share/wallpapers/Remmelz/
+  with_fileglob:
+    - ./files/wallpapers/*
+  when: install_desktop
