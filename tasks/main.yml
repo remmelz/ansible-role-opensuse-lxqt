@@ -13,6 +13,7 @@
 
 - include_tasks: ./base.yml
 - include_tasks: ./desktop.yml
+- include_tasks: ./wallpapers.yml
 - include_tasks: ./{{ distro }}.yml
 - include_tasks: ./lightdm.yml
 - include_tasks: ./skel.yml
