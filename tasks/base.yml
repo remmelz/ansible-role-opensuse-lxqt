@@ -1,7 +1,7 @@
 
 ---
 
-- name: Installing base tools
+- name: Installing Base tools
   zypper:
     state: latest
     name:
