@@ -7,6 +7,7 @@
     name:
       - compton
       - compton-conf
+      - ruby2.5-rubygem-asciidoctor
   when: install_desktop_utils
 
 - name: Removing MozillaFirefox
