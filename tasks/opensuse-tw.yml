@@ -6,5 +6,6 @@
     state: latest
     name:
       - picom
+      - ruby2.7-rubygem-asciidoctor
   when: install_desktop_utils
 
