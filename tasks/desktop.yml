@@ -32,6 +32,7 @@
       - remmina-plugins-gnome
       - transmission-qt
       - kwrite
+      - kfind
       - ktimer
       - konsole
       - filelight
