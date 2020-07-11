@@ -22,5 +22,6 @@
       - scrot
       - mc
       - wavemon
+      - fzf
   when: install_base
 
